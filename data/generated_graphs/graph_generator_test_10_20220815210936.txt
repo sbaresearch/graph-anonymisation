@@ -1,0 +1,149 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<www.examplepreamble.org//Andres_Snow_4> a foaf:Person ;
+    foaf:Organization "TU" ;
+    foaf:age "56" ;
+    foaf:based_near "Hallein" ;
+    foaf:callTo <www.examplepreamble.org//Alejandro_MbappÃ©_0>,
+        <www.examplepreamble.org//Danae_James_8> ;
+    foaf:currentProject "2" ;
+    foaf:knows <www.examplepreamble.org//Alejandro_Nadal_1>,
+        <www.examplepreamble.org//Ursula_Nadal_3> ;
+    foaf:name "Andres_Snow" .
+
+<www.examplepreamble.org//Maria_Williams_7> a foaf:Person ;
+    foaf:Organization "TU",
+        "UniWien" ;
+    foaf:age "44" ;
+    foaf:based_near "Hartberg" ;
+    foaf:callTo <www.examplepreamble.org//Jenny_Ronaldo_5>,
+        <www.examplepreamble.org//Ursula_Nadal_3> ;
+    foaf:currentProject "1",
+        "2" ;
+    foaf:knows <www.examplepreamble.org//Alejandro_Nadal_1>,
+        <www.examplepreamble.org//Andreas_Moore_6> ;
+    foaf:name "Maria_Williams" .
+
+<www.examplepreamble.org//Cristiano_Ortega_2> a foaf:Person ;
+    foaf:Organization "UniWien" ;
+    foaf:age "57" ;
+    foaf:based_near "Poysdorf" ;
+    foaf:callTo <www.examplepreamble.org//Alejandro_MbappÃ©_0>,
+        <www.examplepreamble.org//Alejandro_Nadal_1>,
+        <www.examplepreamble.org//Danae_James_8> ;
+    foaf:currentProject "1",
+        "2",
+        "3" ;
+    foaf:knows <www.examplepreamble.org//Danae_James_8>,
+        <www.examplepreamble.org//Jenny_Ronaldo_5> ;
+    foaf:name "Cristiano_Ortega" .
+
+<www.examplepreamble.org//Khalesi_Ronaldo_9> a foaf:Person ;
+    foaf:Organization "UniWien" ;
+    foaf:age "48" ;
+    foaf:based_near "Horn" ;
+    foaf:callTo <www.examplepreamble.org//Alejandro_MbappÃ©_0>,
+        <www.examplepreamble.org//Alejandro_Nadal_1>,
+        <www.examplepreamble.org//Andreas_Moore_6> ;
+    foaf:currentProject "3" ;
+    foaf:knows <www.examplepreamble.org//Alejandro_Nadal_1>,
+        <www.examplepreamble.org//Andreas_Moore_6>,
+        <www.examplepreamble.org//Jenny_Ronaldo_5> ;
+    foaf:name "Khalesi_Ronaldo" .
+
+<www.examplepreamble.org//Andreas_Moore_6> a foaf:Person ;
+    foaf:Organization "TU",
+        "UniWien" ;
+    foaf:age "70" ;
+    foaf:based_near "Melk" ;
+    foaf:callTo <www.examplepreamble.org//Alejandro_MbappÃ©_0>,
+        <www.examplepreamble.org//Alejandro_Nadal_1>,
+        <www.examplepreamble.org//Khalesi_Ronaldo_9>,
+        <www.examplepreamble.org//Ursula_Nadal_3> ;
+    foaf:currentProject "2" ;
+    foaf:knows <www.examplepreamble.org//Danae_James_8>,
+        <www.examplepreamble.org//Khalesi_Ronaldo_9>,
+        <www.examplepreamble.org//Maria_Williams_7> ;
+    foaf:name "Andreas_Moore" .
+
+<www.examplepreamble.org//Danae_James_8> a foaf:Person ;
+    foaf:Organization "UniWien" ;
+    foaf:age "18" ;
+    foaf:based_near "Weiz" ;
+    foaf:callTo <www.examplepreamble.org//Alejandro_Nadal_1>,
+        <www.examplepreamble.org//Andres_Snow_4>,
+        <www.examplepreamble.org//Cristiano_Ortega_2> ;
+    foaf:currentProject "2",
+        "3" ;
+    foaf:knows <www.examplepreamble.org//Alejandro_MbappÃ©_0>,
+        <www.examplepreamble.org//Alejandro_Nadal_1>,
+        <www.examplepreamble.org//Andreas_Moore_6>,
+        <www.examplepreamble.org//Cristiano_Ortega_2> ;
+    foaf:name "Danae_James" .
+
+<www.examplepreamble.org//Jenny_Ronaldo_5> a foaf:Person ;
+    foaf:Organization "UniWien" ;
+    foaf:age "76" ;
+    foaf:based_near "Lienz" ;
+    foaf:callTo <www.examplepreamble.org//Alejandro_Nadal_1>,
+        <www.examplepreamble.org//Maria_Williams_7>,
+        <www.examplepreamble.org//Ursula_Nadal_3> ;
+    foaf:currentProject "3" ;
+    foaf:knows <www.examplepreamble.org//Alejandro_Nadal_1>,
+        <www.examplepreamble.org//Cristiano_Ortega_2>,
+        <www.examplepreamble.org//Khalesi_Ronaldo_9>,
+        <www.examplepreamble.org//Ursula_Nadal_3> ;
+    foaf:name "Jenny_Ronaldo" .
+
+<www.examplepreamble.org//Alejandro_MbappÃ©_0> a foaf:Person ;
+    foaf:Organization "TU" ;
+    foaf:age "37" ;
+    foaf:based_near "Mattersburg" ;
+    foaf:callTo <www.examplepreamble.org//Andreas_Moore_6>,
+        <www.examplepreamble.org//Andres_Snow_4>,
+        <www.examplepreamble.org//Cristiano_Ortega_2>,
+        <www.examplepreamble.org//Khalesi_Ronaldo_9>,
+        <www.examplepreamble.org//Ursula_Nadal_3> ;
+    foaf:currentProject "1",
+        "2",
+        "3" ;
+    foaf:knows <www.examplepreamble.org//Alejandro_Nadal_1>,
+        <www.examplepreamble.org//Danae_James_8>,
+        <www.examplepreamble.org//Ursula_Nadal_3> ;
+    foaf:name "Alejandro_MbappÃ©" .
+
+<www.examplepreamble.org//Ursula_Nadal_3> a foaf:Person ;
+    foaf:Organization "TU",
+        "UniWien" ;
+    foaf:age "17" ;
+    foaf:based_near "Melk" ;
+    foaf:callTo <www.examplepreamble.org//Alejandro_MbappÃ©_0>,
+        <www.examplepreamble.org//Andreas_Moore_6>,
+        <www.examplepreamble.org//Jenny_Ronaldo_5>,
+        <www.examplepreamble.org//Maria_Williams_7> ;
+    foaf:currentProject "1" ;
+    foaf:knows <www.examplepreamble.org//Alejandro_MbappÃ©_0>,
+        <www.examplepreamble.org//Alejandro_Nadal_1>,
+        <www.examplepreamble.org//Andres_Snow_4>,
+        <www.examplepreamble.org//Jenny_Ronaldo_5> ;
+    foaf:name "Ursula_Nadal" .
+
+<www.examplepreamble.org//Alejandro_Nadal_1> a foaf:Person ;
+    foaf:Organization "UniWien" ;
+    foaf:age "54" ;
+    foaf:based_near "Landeck" ;
+    foaf:callTo <www.examplepreamble.org//Andreas_Moore_6>,
+        <www.examplepreamble.org//Cristiano_Ortega_2>,
+        <www.examplepreamble.org//Danae_James_8>,
+        <www.examplepreamble.org//Jenny_Ronaldo_5>,
+        <www.examplepreamble.org//Khalesi_Ronaldo_9> ;
+    foaf:currentProject "3" ;
+    foaf:knows <www.examplepreamble.org//Alejandro_MbappÃ©_0>,
+        <www.examplepreamble.org//Andres_Snow_4>,
+        <www.examplepreamble.org//Danae_James_8>,
+        <www.examplepreamble.org//Jenny_Ronaldo_5>,
+        <www.examplepreamble.org//Khalesi_Ronaldo_9>,
+        <www.examplepreamble.org//Maria_Williams_7>,
+        <www.examplepreamble.org//Ursula_Nadal_3> ;
+    foaf:name "Alejandro_Nadal" .
+

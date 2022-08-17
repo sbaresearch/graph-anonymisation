@@ -1,0 +1,98 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<#/_ID_1> a foaf:Person ;
+    foaf:age "[40, 60[" ;
+    foaf:based_near "Austria" ;
+    foaf:callTo "#/_ID_6" ;
+    foaf:knows "#/_ID_10" .
+
+<#/_ID_10> a foaf:Person ;
+    foaf:Organization "UniWien" ;
+    foaf:age "[40, 80[" ;
+    foaf:based_near "Tirol" ;
+    foaf:callTo "#/_ID_3",
+        "#/_ID_5",
+        "#/_ID_6" ;
+    foaf:currentProject "3" ;
+    foaf:knows "#/_ID_1",
+        "#/_ID_7",
+        "#/_ID_8" .
+
+<#/_ID_2> a foaf:Person ;
+    foaf:Organization "TU",
+        "UniWien" ;
+    foaf:age "[0, 80[" ;
+    foaf:based_near "Austria" ;
+    foaf:callTo "#/_ID_7",
+        "#/_ID_9" ;
+    foaf:currentProject "1" ;
+    foaf:knows "#/_ID_5" .
+
+<#/_ID_3> a foaf:Person ;
+    foaf:Organization "UniWien" ;
+    foaf:age "[0, 80[" ;
+    foaf:based_near "Austria" ;
+    foaf:callTo "#/_ID_10",
+        "#/_ID_8" ;
+    foaf:currentProject "2",
+        "3" ;
+    foaf:knows "#/_ID_6",
+        "#/_ID_7" .
+
+<#/_ID_4> a foaf:Person ;
+    foaf:age "[40, 60[" ;
+    foaf:based_near "Austria" ;
+    foaf:callTo "#/_ID_5" ;
+    foaf:knows "#/_ID_5" .
+
+<#/_ID_5> a foaf:Person ;
+    foaf:Organization "TU" ;
+    foaf:age "[0, 80[" ;
+    foaf:based_near "Austria" ;
+    foaf:callTo "#/_ID_10",
+        "#/_ID_4" ;
+    foaf:currentProject "2" ;
+    foaf:knows "#/_ID_2",
+        "#/_ID_4",
+        "#/_ID_6" .
+
+<#/_ID_6> a foaf:Person ;
+    foaf:Organization "UniWien" ;
+    foaf:age "[0, 80[" ;
+    foaf:based_near "Austria" ;
+    foaf:callTo "#/_ID_1",
+        "#/_ID_10" ;
+    foaf:currentProject "2",
+        "3" ;
+    foaf:knows "#/_ID_3",
+        "#/_ID_5" .
+
+<#/_ID_7> a foaf:Person ;
+    foaf:Organization "UniWien" ;
+    foaf:age "[40, 80[" ;
+    foaf:based_near "Tirol" ;
+    foaf:callTo "#/_ID_2",
+        "#/_ID_9" ;
+    foaf:currentProject "3" ;
+    foaf:knows "#/_ID_10",
+        "#/_ID_3" .
+
+<#/_ID_8> a foaf:Person ;
+    foaf:Organization "TU" ;
+    foaf:age "[0, 80[" ;
+    foaf:based_near "Austria" ;
+    foaf:callTo "#/_ID_3" ;
+    foaf:currentProject "2" ;
+    foaf:knows "#/_ID_10",
+        "#/_ID_9" .
+
+<#/_ID_9> a foaf:Person ;
+    foaf:Organization "TU",
+        "UniWien" ;
+    foaf:age "[0, 80[" ;
+    foaf:based_near "Austria" ;
+    foaf:callTo "#/_ID_2",
+        "#/_ID_7" ;
+    foaf:currentProject "1" ;
+    foaf:knows "#/_ID_8" .
+
