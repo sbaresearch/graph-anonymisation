@@ -9,16 +9,19 @@ This repository includes the implementation described in the paper [Anonymisatio
 
 ```bash
 python graph_generator/main.py 
---attributes 'age' 'based_near' # Name of the attributes to be generated
---hierarchies 'data/inputs/hierarchies/age.csv' 'data/inputs/hierarchies/austrian_cities.csv' # Path to hierarchy files that are used for attribute generation
---unidirectional_connections currentProject '[1, 2, 3]' Organization '[TU, UniWien]' # Name of the unidirectional connections to be created and their possible values
---bidirectional_connections 'knows' '3' 'callTo' '3' # Name of the bidirectional connections to be generated and the maximum amount of connections between nodes (for each)
---graph_name 'graph_generator_test' # Name of graph that will be generated (a timestamp and the number of people will be added by default)
---n_people '10' # Number of foaf:Person nodes to be generated
---preamble 'www.examplepreamble.org/' # Preamble for the URI of each node
+--attributes 'age' 'based_near' --hierarchies 'data/inputs/hierarchies/age.csv' 'data/inputs/hierarchies/austrian_cities.csv' --unidirectional_connections currentProject '[1, 2, 3]' Organization '[TU, UniWien]' --bidirectional_connections 'knows' '3' 'callTo' '3' --graph_name 'graph_generator_test' --n_people '10' --preamble 'www.examplepreamble.org/'
 
 # Output in data/generated_graphs
 ```
+
+* attributes: Name of the attributes to be generated
+* hierarchies: Path to hierarchy files that are used for attribute generation
+* unidirectional_connections: Name of the unidirectional connections to be created and their possible values
+* bidirectional_connections: Name of the bidirectional connections to be generated and the maximum amount of connections between nodes (for each)
+* graph_name: Name of graph that will be generated (a timestamp and the number of people will be added by default)
+* n_people: Number of foaf:Person nodes to be generated
+* preamble: Preamble for the URI of each node
+
 
 Please, note that if some of the connections that you wish to generate do not belong to the FOAF namespace, they should be added as *custom* in [here (see examples)](https://gitlab.sba-research.org/machine-learning/graph-anonymisation/-/blob/d99eb80e735b5c6bce172501badf3c1ac78cf6f5/graph_generator/namespace.py).
 
@@ -27,26 +30,33 @@ Please, note that if some of the connections that you wish to generate do not be
 3. Run the graph [k-rdf-anonymization algorithm](https://gitlab.sba-research.org/machine-learning/graph-anonymisation/-/blob/3629069e6e9b84fedb52e603e3edb425ab6866fa/graph_k_rdf_anonymizator/main.py).
 
 ```bash
-python graph_k_rdf_anonymizator/main.py
---graph_file 'data/generated_graphs/graph_generator_test_10_20220815210936.txt' # RDF graph to be anonymized (generated or imported)
---attributes 'age' 'based_near' # List of attribute connections to be anonymized
---hierarchies 'data/inputs/hierarchies/age.csv' 'data/inputs/hierarchies/austrian_cities.csv' # List of hierarchies to be used for the attribute generalization
---unidirectional_connections 'currentProject' 'Organization' # List of unidirectional connections to be anonymized
---bidirectional_connections 'knows' 'callTo' # List of bidirectional connections to be anonymized 
---k '2' # K-parameter for the anonymization
+python graph_k_rdf_anonymizator/main.py --graph_file 'data/generated_graphs/graph_generator_test_10_20220815210936.txt' --attributes 'age' 'based_near' --hierarchies 'data/inputs/hierarchies/age.csv' 'data/inputs/hierarchies/austrian_cities.csv' --unidirectional_connections 'currentProject' 'Organization' --bidirectional_connections 'knows' 'callTo' --k '2'
 
 # Output in: data/anonymized_graphs
 ```
 
+* graph_file: RDF graph to be anonymized (generated or imported)
+* attributes: List of attribute connections to be anonymized
+* hierarchies: List of hierarchies to be used for the attribute generalization
+* unidirectional_connections: List of unidirectional connections to be anonymized
+* bidirectional_connections: List of bidirectional connections to be anonymized 
+* k: K-parameter for the anonymization
+
+# Output in: data/anonymized_graphs
+
+
 Note that there are some **additional arguments** that can be provided to the anonymization algorithm: 
 
 ```bash
--- sensitive_attributes has_disease # Sensitive attributes to be kept as they are originally
--- merge_bidirectional_connectionls 'messageConnections: emails, letters' # Enter which bidirectional connections should be merged together because, for instance, they are semantically similar. This adds an extra-layer of security to the anonymization and simplifies the graph in terms of semantics.
--- weights age, 0.5, based_near, 0.7... # Enter the weights of each of the connections for the dissimilarity computation algorithm. Weights are normalized afterwards. 
+-- sensitive_attributes has_disease -- merge_bidirectional_connectionls 'messageConnections: emails, letters' -- weights age, 0.5, based_near, 0.7... 
 ```
 
-**Disclaimer: **this project was aimed at testing the new heterogeneous graph anonymization approach presented in [Anonymisation of Heterogeneous Graphs with Multiple Edge types](https://link.springer.com/chapter/10.1007/978-3-031-12423-5_10). However, it has not been tested for every possible RDF input graph and the user may have to adapt some functions to make it work with a customized input. 
+* sensitive_attributes: Sensitive attributes to be kept as they are originally
+* merge_bidirectional_connectionls: Enter which bidirectional connections should be merged together because, for instance, they are semantically similar. This adds an extra-layer of security to the anonymization and simplifies the graph in terms of semantics.
+* weights: Enter the weights of each of the connections for the dissimilarity computation algorithm. Weights are normalized afterwards. 
+
+
+**Disclaimer:** this project was aimed at testing the new heterogeneous graph anonymization approach presented in [Anonymisation of Heterogeneous Graphs with Multiple Edge types](https://link.springer.com/chapter/10.1007/978-3-031-12423-5_10). However, it has not been tested for every possible RDF input graph and the user may have to adapt some functions to make it work with a customized input. 
 
 # Cite this paper 
 
