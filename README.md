@@ -8,8 +8,7 @@ This repository includes the implementation described in the paper [Anonymisatio
 2. Generate a sample graph by running our [graph generator](https://gitlab.sba-research.org/machine-learning/graph-anonymisation/-/blob/d99eb80e735b5c6bce172501badf3c1ac78cf6f5/graph_generator/main.py). 
 
 ```bash
-python graph_generator/main.py 
---attributes 'age' 'based_near' --hierarchies 'data/inputs/hierarchies/age.csv' 'data/inputs/hierarchies/austrian_cities.csv' --unidirectional_connections currentProject '[1, 2, 3]' Organization '[TU, UniWien]' --bidirectional_connections 'knows' '3' 'callTo' '3' --graph_name 'graph_generator_test' --n_people '10' --preamble 'www.examplepreamble.org/'
+python graph_generator/main.py --attributes 'age' 'based_near' --hierarchies 'data/inputs/hierarchies/age.csv' 'data/inputs/hierarchies/austrian_cities.csv' --unidirectional_connections currentProject '[1, 2, 3]' Organization '[TU, UniWien]' --bidirectional_connections 'knows' '3' 'callTo' '3' --graph_name 'graph_generator_test' --n_people '10' --preamble 'www.examplepreamble.org/'
 
 # Output in data/generated_graphs
 ```
